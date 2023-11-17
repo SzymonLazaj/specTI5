@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Kalkulator</title>
+</head>
+<body>
+
+<form action="{$app_url}/app/kredyty_smarty.php" method="post">
+	<label for="id_kwota">Kwota: </label>
+	<input id="id_kwota" type="number" name="kwota" value="{$kwota}"/><br />
+	<label for="id_mies">Liczba miesięcy: </label>
+	<input id="id_mies" type="number" name="mies" value="{$mies}"><br />
+	<label for="id_opr">Oprocentowanie: </label>
+	<input id="id_opr" type="number" name="opr" value="{$opr}" /><br />
+	<input type="submit" value="Oblicz" />
+</form>
+
+	{$messages}
+
+<div style="margin: 20px; padding: 10px; border-radius: 5px; background-color: #ff0; width:300px;">
+	{$result}
+		
+</div>
